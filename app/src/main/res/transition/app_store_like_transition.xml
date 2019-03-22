@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <transitionSet>
+        <targets>
+            <target android:targetId="@id/container" />
+        </targets>
+        <!-- Custom transition to take care of rounded corner to square corners transition -->
+        <transition
+            class="dev.wakwak.transitionsnippets.transitions.ChangeOutlineRadius"
+            app:endRadius="0dp"
+            app:startRadius="16dp" />
+        <!-- Default shared element transitions -->
+        <changeBounds />
+        <changeTransform />
+        <changeClipBounds />
+        <changeImageTransform />
+    </transitionSet>
+</transitionSet>
